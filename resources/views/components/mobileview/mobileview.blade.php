@@ -5,7 +5,6 @@
         <div class="absolute top-1 right-0 -mr-14 p-1">
             <button type="button"
                 class="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white">
-                <!-- Heroicon name: outline/x -->
                 <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -20,7 +19,6 @@
         <div class="mt-5 flex-1 h-0 px-2 overflow-y-auto">
             <nav class="h-full flex flex-col">
                 <div class="space-y-1">
-                    <!-- Current: "bg-indigo-800 text-white", Default: "text-indigo-100 hover:bg-indigo-800 hover:text-white" -->
                     <a href="#"
                         class="text-indigo-100 hover:bg-indigo-800 hover:text-white group py-2 px-3 rounded-md flex items-center text-sm font-medium">
 
@@ -35,7 +33,6 @@
 
                     <a href="#"
                         class="text-indigo-100 hover:bg-indigo-800 hover:text-white group py-2 px-3 rounded-md flex items-center text-sm font-medium">
-                        <!-- Heroicon name: outline/view-grid -->
                         <svg class="text-indigo-300 group-hover:text-white mr-3 h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
@@ -48,7 +45,6 @@
                     <a href="#"
                         class="bg-indigo-800 text-white group py-2 px-3 rounded-md flex items-center text-sm font-medium"
                         aria-current="page">
-                        <!-- Heroicon name: outline/photograph -->
                         <svg class="text-white mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -59,7 +55,6 @@
 
                     <a href="#"
                         class="text-indigo-100 hover:bg-indigo-800 hover:text-white group py-2 px-3 rounded-md flex items-center text-sm font-medium">
-                        <!-- Heroicon name: outline/user-group -->
                         <svg class="text-indigo-300 group-hover:text-white mr-3 h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
@@ -71,7 +66,6 @@
 
                     <a href="#"
                         class="text-indigo-100 hover:bg-indigo-800 hover:text-white group py-2 px-3 rounded-md flex items-center text-sm font-medium">
-                        <!-- Heroicon name: outline/collection -->
                         <svg class="text-indigo-300 group-hover:text-white mr-3 h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
@@ -83,7 +77,6 @@
 
                     <a href="#"
                         class="text-indigo-100 hover:bg-indigo-800 hover:text-white group py-2 px-3 rounded-md flex items-center text-sm font-medium">
-                        <!-- Heroicon name: outline/cog -->
                         <svg class="text-indigo-300 group-hover:text-white mr-3 h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
@@ -100,6 +93,5 @@
     </div>
 
     <div class="flex-shrink-0 w-14" aria-hidden="true">
-        <!-- Dummy element to force sidebar to shrink to fit close icon -->
     </div>
 </div>

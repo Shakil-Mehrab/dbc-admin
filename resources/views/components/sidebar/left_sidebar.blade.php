@@ -14,10 +14,8 @@
                 </svg>
                 <span class="mt-2">Home</span>
             </a>
-
             <a href="#"
                 class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
-                <!-- Heroicon name: outline/view-grid -->
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -25,11 +23,9 @@
                 </svg>
                 <span class="mt-2">All Files</span>
             </a>
-
             <a href="#"
                 class="bg-indigo-800 text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium"
                 aria-current="page">
-                <!-- Heroicon name: outline/photograph -->
                 <svg class="text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -37,10 +33,8 @@
                 </svg>
                 <span class="mt-2">Photos</span>
             </a>
-
             <a href="#"
                 class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
-                <!-- Heroicon name: outline/user-group -->
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,10 +42,8 @@
                 </svg>
                 <span class="mt-2">Shared</span>
             </a>
-
             <a href="#"
                 class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
-                <!-- Heroicon name: outline/collection -->
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -59,10 +51,8 @@
                 </svg>
                 <span class="mt-2">Albums</span>
             </a>
-
             <a href="#"
                 class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
-                <!-- Heroicon name: outline/cog -->
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
