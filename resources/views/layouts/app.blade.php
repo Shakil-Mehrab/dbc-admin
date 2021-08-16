@@ -12,19 +12,20 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-sans antialiased" <div class="min-h-screen bg-gray-100">
-    <main>
-        <div class="relative h-screen bg-gray-50 flex overflow-hidden">
-            <x-sidebar.left_sidebar></x-sidebar.left_sidebar>
-            <x-mobileview.mobileview></x-mobileview.mobileview>
-            <div class="flex-1 flex flex-col overflow-hidden">
-                <x-header.header></x-header.header>
-                <div class="flex-1 flex items-stretch overflow-hidden">
-                    {{ $slot }}
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100">
+        <main>
+            <div class="relative h-screen bg-gray-50 flex overflow-hidden">
+                <x-sidebar.left_sidebar></x-sidebar.left_sidebar>
+                <x-mobileview.mobileview></x-mobileview.mobileview>
+                <div class="flex-1 flex flex-col overflow-hidden">
+                    <x-header.header></x-header.header>
+                    <div class="flex-1 flex items-stretch overflow-hidden">
+                        {{ $slot }}
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
     </div>
     @stack('modals')
     {{-- @livewireScripts --}}

@@ -1,5 +1,8 @@
 <div class="fixed inset-0 z-40 flex md:hidden" role="dialog" aria-modal="true">
 
+    <div class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"></div>
+
+
     <div class="relative max-w-xs w-full bg-indigo-700 pt-5 pb-4 flex-1 flex flex-col">
 
         <div class="absolute top-1 right-0 -mr-14 p-1">
