@@ -1,7 +1,7 @@
 <x-app-layout>
     <main class="flex-1 overflow-y-auto">
         <div class="pt-8 w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <x-header.breadcrumb></x-header.breadcrumb>
+            <x-header.breadcrumb title="Media"></x-header.breadcrumb>
 
             <div class="mt-3 sm:mt-2">
                 <div class="sm:hidden">
@@ -67,7 +67,7 @@
                         <li class="relative">
                             <div
                                 class="ring-2 ring-offset-2 ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                                <img src="https://images.unsplash.com/photo-1431512284068-4c4002298068?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
                                     alt="" class="object-cover pointer-events-none">
                                 <button type="button" class="absolute inset-0 focus:outline-none">
                                     <span class="sr-only">View details for IMG_4985.HEIC</span>

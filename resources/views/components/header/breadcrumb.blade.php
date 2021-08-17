@@ -1,6 +1,6 @@
   {{-- bredcrumb --}}
   <div class="flex">
-      <h1 class="flex-1 text-2xl font-bold text-gray-900">Photos</h1>
+      <h1 class="flex-1 text-2xl font-bold text-gray-900">{{ $title }}</h1>
       <div class="ml-6 bg-gray-100 p-0.5 rounded-lg flex items-center sm:hidden">
           <button type="button"
               class="p-1.5 rounded-md text-gray-400 hover:bg-white hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

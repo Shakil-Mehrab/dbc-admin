@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\Media\MediaController;
 use App\Http\Controllers\Admin\Article\ArticleController;
 use App\Http\Controllers\Admin\Setting\SettingController;
@@ -16,9 +17,7 @@ use App\Http\Controllers\Admin\Setting\SettingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DashboardController::class, 'index']);
 Route::get('setting', [SettingController::class, 'index']);
 Route::resource('media', MediaController::class);
 Route::resource('articles', ArticleController::class);
