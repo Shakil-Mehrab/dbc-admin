@@ -1,11 +1,11 @@
-{{-- <div class="hidden w-28 bg-indigo-700 overflow-y-auto md:block">
+<div class="hidden w-28 bg-gray-700 overflow-y-auto md:block">
     <div class="w-full py-6 flex flex-col items-center">
         <div class="flex-shrink-0 flex items-center">
             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="Workflow">
         </div>
         <div class="flex-1 mt-6 w-full px-2 space-y-1">
             <a href="{{ url('/') }}"
-                class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
+                class="text-indigo-100 hover:bg-gray-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
 
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -15,7 +15,7 @@
                 <span class="mt-2">Home</span>
             </a>
             <a href="#"
-                class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
+                class="text-indigo-100 hover:bg-gray-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -24,7 +24,7 @@
                 <span class="mt-2">All Files</span>
             </a>
             <a href="{{ url('media') }}"
-                class="bg-indigo-800 text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium"
+                class="bg-gray-800 text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium"
                 aria-current="page">
                 <svg class="text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" aria-hidden="true">
@@ -34,7 +34,7 @@
                 <span class="mt-2">Media</span>
             </a>
             <a href="#"
-                class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
+                class="text-indigo-100 hover:bg-gray-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -43,7 +43,7 @@
                 <span class="mt-2">Shared</span>
             </a>
             <a href="#"
-                class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
+                class="text-indigo-100 hover:bg-gray-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -52,7 +52,7 @@
                 <span class="mt-2">Albums</span>
             </a>
             <a href="{{ url('setting') }}"
-                class="text-indigo-100 hover:bg-indigo-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
+                class="text-indigo-100 hover:bg-gray-800 hover:text-white group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium">
                 <svg class="text-indigo-300 group-hover:text-white h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -64,10 +64,10 @@
             </a>
         </div>
     </div>
-</div> --}}
+</div>
 
 {{-- wide left side --}}
-<div class="hidden w-96 overflow-y-auto md:block flex-col border-r border-gray-200 pt-5 pb-4 bg-white">
+{{-- <div class="hidden w-96 overflow-y-auto md:block flex-col border-r border-gray-200 pt-5 pb-4 bg-white">
     <div class="flex-shrink-0 flex items-center">
         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
             alt="Workflow">
@@ -90,8 +90,6 @@
 
 
                 <div class="space-y-1" x-data="{ open: false }">
-
-
                     <button type="button"
                         class="bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         aria-controls="sub-menu-1" aria-expanded="false" @click.prevent="open=!open">
@@ -137,4 +135,4 @@
             @endfor
         </nav>
     </div>
-</div>
+</div> --}}

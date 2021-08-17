@@ -10,10 +10,23 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     {{-- @livewireStyles --}}
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script>
+        function menu() {
+            return {
+                open: true,
+                openMenu() {
+                    this.open = true
+                },
+                closeMenu() {
+                    this.open = false
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="font-sans antialiased">
-    <div x-data="{ open: false }" @keydown.window.escape="open = false"
+    <div x-data="menu()" @keydown.window.escape="closeMenu()" x-init="open = false"
         class="relative h-screen bg-gray-50 flex overflow-hidden">
         <!-- Narrow sidebar -->
         <div class="hidden w-28 bg-indigo-700 overflow-y-auto md:block">
@@ -127,7 +140,7 @@
                 x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                 x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100"
                 x-transition:leave-end="opacity-0" class="fixed inset-0 bg-gray-600 bg-opacity-75"
-                x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." @click="open = false"
+                x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." @click="closeMenu()"
                 aria-hidden="true">
             </div>
 
@@ -145,7 +158,7 @@
                     x-description="Close button, show/hide based on off-canvas menu state.">
                     <button type="button"
                         class="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white"
-                        @click="open = false">
+                        @click="closeMenu()">
                         <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/x"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             aria-hidden="true">
@@ -268,10 +281,11 @@
         <!-- Content area -->
         <div class="flex-1 flex flex-col overflow-hidden">
             <header class="w-full">
+
                 <div class="relative z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 shadow-sm flex">
                     <button type="button"
                         class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
-                        @click="open = true">
+                        @click="openMenu()">
                         <span class="sr-only">Open sidebar</span>
                         <svg class="h-6 w-6" x-description="Heroicon name: outline/menu-alt-2"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -305,53 +319,7 @@
                             </form>
                         </div>
                         <div class="ml-2 flex items-center space-x-4 sm:ml-6 sm:space-x-6">
-                            <!-- Profile dropdown -->
-                            <div x-data="Components.menu({ open: false })" x-init="init()"
-                                @keydown.escape.stop="open = false; focusButton()" @click.away="onClickAway($event)"
-                                class="relative flex-shrink-0">
-                                <div>
-                                    <button type="button"
-                                        class="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                        id="user-menu-button" x-ref="button" @click="onButtonClick()"
-                                        @keyup.space.prevent="onButtonEnter()" @keydown.enter.prevent="onButtonEnter()"
-                                        aria-expanded="false" aria-haspopup="true"
-                                        x-bind:aria-expanded="open.toString()" @keydown.arrow-up.prevent="onArrowUp()"
-                                        @keydown.arrow-down.prevent="onArrowDown()">
-                                        <span class="sr-only">Open user menu</span>
-                                        <img class="h-8 w-8 rounded-full"
-                                            src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80"
-                                            alt="">
-                                    </button>
-                                </div>
-
-                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                                    x-transition:enter-start="transform opacity-0 scale-95"
-                                    x-transition:enter-end="transform opacity-100 scale-100"
-                                    x-transition:leave="transition ease-in duration-75"
-                                    x-transition:leave-start="transform opacity-100 scale-100"
-                                    x-transition:leave-end="transform opacity-0 scale-95"
-                                    class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                    x-ref="menu-items" x-description="Dropdown menu, show/hide based on menu state."
-                                    x-bind:aria-activedescendant="activeDescendant" role="menu"
-                                    aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"
-                                    @keydown.arrow-up.prevent="onArrowUp()" @keydown.arrow-down.prevent="onArrowDown()"
-                                    @keydown.tab="open = false" @keydown.enter.prevent="open = false; focusButton()"
-                                    @keyup.space.prevent="open = false; focusButton()" style="display: none;">
-
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" x-state:on="Active"
-                                        x-state:off="Not Active" :class="{ 'bg-gray-100': activeIndex === 0 }"
-                                        role="menuitem" tabindex="-1" id="user-menu-item-0"
-                                        @mouseenter="activeIndex = 0" @mouseleave="activeIndex = -1"
-                                        @click="open = false; focusButton()">Your profile</a>
-
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700"
-                                        :class="{ 'bg-gray-100': activeIndex === 1 }" role="menuitem" tabindex="-1"
-                                        id="user-menu-item-1" @mouseenter="activeIndex = 1"
-                                        @mouseleave="activeIndex = -1" @click="open = false; focusButton()">Sign out</a>
-
-                                </div>
-
-                            </div>
+                            <x-header.profile-dropdown></x-header.profile-dropdown>
 
                             <button type="button"
                                 class="flex bg-indigo-600 p-1 rounded-full items-center justify-center text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
