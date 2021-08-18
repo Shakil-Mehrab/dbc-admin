@@ -8,7 +8,7 @@
     <title>{{ config('app.name', 'ডিবিসি নিউজ') }}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    {{-- @livewireStyles --}}
+    @livewireStyles
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
     @stack('scripts')
@@ -30,7 +30,7 @@
         </main>
     </div>
     @stack('modals')
-    {{-- @livewireScripts --}}
+    @livewireScripts
 </body>
 
 </html>

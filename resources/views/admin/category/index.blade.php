@@ -1,7 +1,7 @@
 <x-app-layout>
     <main class="flex-1 overflow-y-auto">
         <div class="pt-8 w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <x-header.breadcrumb title="Dashboard"></x-header.breadcrumb>
+            <x-header.breadcrumb title="Category"></x-header.breadcrumb>
             <div class="flex flex-col">
                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

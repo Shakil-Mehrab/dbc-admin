@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Article;
+namespace App\Http\Controllers\Admin\Category;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class CategoryController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +15,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('admin.article.index');
+        return view('admin.category.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.article.create');
+        //
     }
 
     /**
@@ -35,7 +36,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        return back();
+        //
     }
 
     /**
@@ -46,7 +47,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return view('admin.article.show');
+        //
     }
 
     /**
@@ -57,7 +58,7 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.article.edit');
+        //
     }
 
     /**
@@ -69,7 +70,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return back();
+        //
     }
 
     /**
@@ -80,6 +81,6 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        return back();
+        //
     }
 }
