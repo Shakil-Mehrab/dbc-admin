@@ -32,8 +32,13 @@
     <div>
 
         @foreach (collect([1, 2, 3, 4, 5]) as $article)
-            <div class="border-b-2 border-t-2 border-gray-200 p-4 flex justify-between group bg-white">
-                <img class="h-15 w-20 mr-4" src="https://picsum.photos/id/1/15/20" alt="Thumbnail">
+            <div class="border-b-2 border-t-2 border-gray-200 p-4 sm:flex justify-between group bg-white">
+                {{-- <img class="h-15 w-20 mr-4" src="https://picsum.photos/id/1/15/20" alt="Thumbnail"> --}}
+                <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
+                    <img class="h-32 w-32 border border-gray-300 bg-white text-gray-300"
+                        src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                        alt="Workflow">
+                </div>
 
                 <div class="flex flex-wrap items-center justify-between w-full">
                     <div class="w-full md:w-4/12 mb-2">

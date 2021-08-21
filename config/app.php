@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        App\Providers\FutureStationServiceProvider::class,
         /*
          * Application Service Providers...
          */
