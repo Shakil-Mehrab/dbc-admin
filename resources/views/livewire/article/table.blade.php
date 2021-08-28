@@ -46,18 +46,17 @@
                             জালালাবাদে তালেবান বিরোধী বিক্ষোভে গুলি, নিহত ৩
                             {{-- {{ $article->title }} --}}
                         </h2>
-                        {{-- @if ($article->topics->isNotEmpty())
-                                    @foreach ($article->topics as $topic) --}}
-                        <a href="#"
-                            class="inline-block text-gray-600 border border-gray-300 px-2 py-0 rounded mr-1 mt-1 bg-white">
-                            {{-- {{ $topic->name }} --}}
-                            Prime Minister
-                        </a>
-                        {{-- @endforeach
-                                @endif --}}
-
-
-
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="w-4 h-4 text-gray-500 mr-1">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <div class="text-sm text-gray-500">
+                                {{-- {{ $article->user->name }} --}}
+                                আবু বকর
+                            </div>
+                        </div>
                         <div class="flex items-center mt-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" class="w-4 h-4 text-gray-500 mr-1">
@@ -70,17 +69,7 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="w-4 h-4 text-gray-500 mr-1">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <div class="text-sm text-gray-500">
-                                {{-- {{ $article->user->name }} --}}
-                                আবু বকর
-                            </div>
-                        </div>
+
                     </div>
 
                     {{-- @if ($article->categories->isNotEmpty()) --}}
