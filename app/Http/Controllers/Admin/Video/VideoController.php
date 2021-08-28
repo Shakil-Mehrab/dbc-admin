@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Region;
+namespace App\Http\Controllers\Admin\Video;
 
-use App\Models\Region;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class RegionController extends Controller
+class VideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class RegionController extends Controller
      */
     public function index()
     {
-        return view('admin.region.index');
+        return view('admin.video.index');
     }
 
     /**
@@ -25,7 +24,7 @@ class RegionController extends Controller
      */
     public function create()
     {
-        return view('admin.region.create');
+        //
     }
 
     /**
@@ -45,9 +44,9 @@ class RegionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Region $region)
+    public function show($id)
     {
-        return $region;
+        //
     }
 
     /**
@@ -58,7 +57,7 @@ class RegionController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.region.edit');
+        //
     }
 
     /**
@@ -79,8 +78,8 @@ class RegionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Region $region)
+    public function destroy($id)
     {
-        $region->delete();
+        //
     }
 }

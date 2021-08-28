@@ -118,26 +118,32 @@
                             Brief description for your profile. URLs are hyperlinked.
                         </p>
                     </div>
-                    <fieldset class="col-span-12 sm:flex flex-wrap">
-                        @for ($i = 0; $i < 10; $i++)
-                            <div class="pr-4">
-                                <div class="relative flex items-start">
-                                    <div class="flex items-center h-5">
-                                        <input id="candidates" aria-describedby="candidates-description"
-                                            name="candidates" type="checkbox"
-                                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                                    </div>
-                                    <div class="ml-3 text-sm">
-                                        <label for="candidates" class="font-medium text-gray-700">New
-                                            candidates</label>
-                                        <span id="candidates-description" class="text-gray-500"><span
-                                                class="sr-only">New candidates </span>who apply for any open
-                                            postings.</span>
+                    <div class="col-span-12">
+                        <label for="about" class="block text-sm font-medium text-gray-700">
+                            Category
+                        </label>
+                        <fieldset class=" sm:flex flex-wrap">
+
+                            @for ($i = 0; $i < 10; $i++)
+                                <div class="pr-4">
+                                    <div class="relative flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input id="candidates" aria-describedby="candidates-description"
+                                                name="candidates" type="checkbox"
+                                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="candidates" class="font-medium text-gray-700">New
+                                                candidates</label>
+                                            <span id="candidates-description" class="text-gray-500"><span
+                                                    class="sr-only">New candidates </span>who apply for any open
+                                                postings.</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endfor
-                    </fieldset>
+                            @endfor
+                        </fieldset>
+                    </div>
                     <div class="col-span-6 sm:col-span-6">
                         <x-label for="tags" value="{{ __('Tags') }}" />
                         <x-input.select2 multiple>

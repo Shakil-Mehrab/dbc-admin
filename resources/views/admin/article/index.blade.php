@@ -1,19 +1,7 @@
 <x-app-layout>
     <main class="flex-1 overflow-y-auto">
         <div class="pt-8 w-full mx-auto px-4 sm:px-6 lg:px-8">
-            {{-- <x-header.breadcrumb title="Article"></x-header.breadcrumb> --}}
-            {{-- <x-slot name="header"> --}}
-            <div class="flex flex-wrap justify-between bg-white p-4 rounded-t-sm">
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    {{ __('Article') }}
-                </h2>
-                <a href="{{ url('articles/create') }}"
-                    class="inline-block text-gray-600 border border-gray-300 px-3 py-1 shadow-md rounded-md bg-white">
-                    {{-- {{ route('article.create') }} --}}
-                    Create New Article
-                </a>
-            </div>
-            {{-- </x-slot> --}}
+            <x-header.breadcrumb title="article"></x-header.breadcrumb>
             <livewire:article.table paginate="20" />
 
         </div>

@@ -1,8 +1,34 @@
 <x-app-layout>
     <main class="flex-1 overflow-y-auto">
-        <div class="pt-8 w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <x-header.breadcrumb title="Media"></x-header.breadcrumb>
+        <div class="pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex">
+                <h1 class="flex-1 text-2xl font-bold text-gray-900">Photos</h1>
+                <div class="ml-6 bg-gray-100 p-0.5 rounded-lg flex items-center sm:hidden">
+                    <button type="button"
+                        class="p-1.5 rounded-md text-gray-400 hover:bg-white hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <!-- Heroicon name: solid/view-list -->
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Use list view</span>
+                    </button>
+                    <button type="button"
+                        class="ml-0.5 bg-white p-1.5 rounded-md shadow-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <!-- Heroicon name: solid/view-grid -->
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path
+                                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>
+                        <span class="sr-only">Use grid view</span>
+                    </button>
+                </div>
+            </div>
 
+            <!-- Tabs -->
             <div class="mt-3 sm:mt-2">
                 <div class="sm:hidden">
                     <label for="tabs" class="sr-only">Select a tab</label>
@@ -59,31 +85,36 @@
                 </div>
             </div>
 
+            <!-- Gallery -->
             <section class="mt-8 pb-16" aria-labelledby="gallery-heading">
                 <h2 id="gallery-heading" class="sr-only">Recently viewed</h2>
                 <ul role="list"
                     class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                    @for ($i = 1; $i <= 20; $i++)
+                    @for ($i = 0; $i < 12; $i++)
+
+
                         <li class="relative">
+                            <!-- Current: "ring-2 ring-offset-2 ring-indigo-500", Default: "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500" -->
                             <div
                                 class="ring-2 ring-offset-2 ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1431512284068-4c4002298068?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
+                                <!-- Current: "", Default: "group-hover:opacity-75" -->
+                                <img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80"
                                     alt="" class="object-cover pointer-events-none">
                                 <button type="button" class="absolute inset-0 focus:outline-none">
                                     <span class="sr-only">View details for IMG_4985.HEIC</span>
                                 </button>
                             </div>
                             <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">
-                                IMG_4985.HEIC</p>
-                            <p class="block text-sm font-medium text-gray-500 pointer-events-none">3.9
-                                MB</p>
+                                IMG_4985.HEIC
+                            </p>
+                            <p class="block text-sm font-medium text-gray-500 pointer-events-none">3.9 MB</p>
                         </li>
                     @endfor
+                    <!-- More files... -->
                 </ul>
             </section>
         </div>
     </main>
-
     <aside class="hidden w-96 bg-white p-8 border-l border-gray-200 overflow-y-auto lg:block">
         <div class="pb-16 space-y-6">
             <div>
@@ -93,9 +124,9 @@
                 </div>
                 <div class="mt-4 flex items-start justify-between">
                     <div>
-                        <h2 class="text-lg font-medium text-gray-900"><span class="sr-only">Details
-                                for
-                            </span>IMG_4985.HEIC</h2>
+                        <h2 class="text-lg font-medium text-gray-900"><span class="sr-only">Details for
+                            </span>IMG_4985.HEIC
+                        </h2>
                         <p class="text-sm font-medium text-gray-500">3.9 MB</p>
                     </div>
                     <button type="button"
@@ -156,9 +187,8 @@
                 </div>
             </div>
             <div>
-                <h3 class="font-medium text-gray-900">Uploaded By</h3>
+                <h3 class="font-medium text-gray-900">Shared with</h3>
                 <ul class="mt-2 border-t border-b border-gray-200 divide-y divide-gray-200">
-
                     <li class="py-3 flex justify-between items-center">
                         <div class="flex items-center">
                             <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=1024&h=1024&q=80"
@@ -170,7 +200,16 @@
                                 class="sr-only"> Aimee Douglas</span></button>
                     </li>
 
-
+                    <li class="py-3 flex justify-between items-center">
+                        <div class="flex items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixqx=oilqXxSqey&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="" class="w-8 h-8 rounded-full">
+                            <p class="ml-4 text-sm font-medium text-gray-900">Andrea McMillan</p>
+                        </div>
+                        <button type="button"
+                            class="ml-6 bg-white rounded-md text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Remove<span
+                                class="sr-only"> Andrea McMillan</span></button>
+                    </li>
 
                     <li class="py-2 flex justify-between items-center">
                         <button type="button"

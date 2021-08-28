@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Media;
 
-use App\Http\Controllers\Controller;
+use App\Models\Media;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MediaController extends Controller
 {
@@ -24,7 +25,7 @@ class MediaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.media.create');
     }
 
     /**
@@ -44,9 +45,9 @@ class MediaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Media $media)
     {
-        //
+        return $media;
     }
 
     /**
@@ -57,7 +58,7 @@ class MediaController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.media.edit');
     }
 
     /**
@@ -78,8 +79,8 @@ class MediaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Media $media)
     {
-        //
+        $media->delete();
     }
 }

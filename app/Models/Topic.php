@@ -38,7 +38,7 @@ class Topic extends Model
     {
         static::creating(function (Model $model) {
             $model->uuid = Str::uuid();
-            $model->slug = Str::slug(request('name'));
+            $model->slug = Str::random(5) . Str::slug(request('name'));
         });
     }
 

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Article;
 
-use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
@@ -35,7 +36,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        return back();
+        //
     }
 
     /**
@@ -44,9 +45,9 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Article $article)
     {
-        return view('admin.article.show');
+        return $article;
     }
 
     /**
@@ -69,7 +70,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return back();
+        //
     }
 
     /**
@@ -78,8 +79,8 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Article $article)
     {
-        return back();
+        $article->delete();
     }
 }

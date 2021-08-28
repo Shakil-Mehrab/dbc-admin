@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Tag;
 
-use App\Http\Controllers\Controller;
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TagController extends Controller
 {
@@ -24,7 +25,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tag.create');
     }
 
     /**
@@ -44,9 +45,9 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tag $tag)
     {
-        //
+        return $tag;
     }
 
     /**
@@ -57,7 +58,7 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.tag.edit');
     }
 
     /**
@@ -78,8 +79,8 @@ class TagController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tag $tag)
     {
-        //
+        $tag->delete();
     }
 }

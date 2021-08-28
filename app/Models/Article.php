@@ -57,7 +57,7 @@ class Article extends Model
     {
         static::creating(function (Model $model) {
             $model->uuid = Str::uuid();
-            $model->slug = Str::slug(request('headline'));
+            $model->slug = Str::random(5) . Str::slug(request('headline'));
         });
     }
 

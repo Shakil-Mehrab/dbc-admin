@@ -62,6 +62,5 @@ class ManageMedia implements ManageMedias
      */
     public function delete($media)
     {
-
     }
 }

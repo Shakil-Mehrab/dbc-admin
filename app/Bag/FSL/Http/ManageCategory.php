@@ -62,6 +62,5 @@ class ManageCategory implements ManageCategories
      */
     public function delete($category)
     {
-
     }
 }
